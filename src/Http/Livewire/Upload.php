@@ -69,6 +69,7 @@ class Upload extends Component
         }
 
         $this->uploadFile($fileToUpload);
+        $this->resetErrorBag('file');
         $this->file = null;
     }
 

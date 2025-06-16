@@ -105,7 +105,7 @@
 
     <!-- Hidden form fields for uploaded files -->
     @if(count($uploadedFiles) > 0)
-        <input type="hidden" name="{{ $name }}" value="{{ $uploadedFiles[0]['path'] ?? '' }}">
+        <input type="hidden" name="{{ $name }}-tmp" value="{{ $uploadedFiles[0]['path'] ?? '' }}">
     @endif
 
     <!-- Error Messages -->
