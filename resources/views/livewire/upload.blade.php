@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <button type="button"
-                                        wire:click="removeFile({{ $index }})"
+                                        wire:click.stop="removeFile({{ $index }})"
                                         class="btn btn-sm btn-outline-danger">
                                     <i class="fa-solid fa-times"></i>
                                 </button>
