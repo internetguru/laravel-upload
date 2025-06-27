@@ -42,15 +42,7 @@
 
             @if(count($uploadedFiles) === 0)
                 <!-- Empty state -->
-                <div class="upload-empty-state">
-                    <div class="upload-icon mb-3">
-                        <i class="fa-solid fa-2x fa-cloud-upload-alt text-secondary"></i>
-                    </div>
-                    <div class="upload-text">
-                        <p class="upload-title mb-2 fw-semibold">{{ __('ig-upload::upload.drag_drop_title_single') }}</p>
-                        <p class="upload-subtitle mb-0 text-muted">{{ __('ig-upload::upload.drag_drop_subtitle_single') }}</p>
-                    </div>
-                </div>
+                <x-upload::empty-state />
             @else
                 <!-- Files uploaded state -->
                 <div class="upload-files-state">
@@ -72,7 +64,7 @@
                                     </div>
                                 </div>
                                 <button type="button"
-                                        wire:click="removeFile({{ $index }})"
+                                        wire:click.stop="removeFile({{ $index }})"
                                         class="btn btn-sm btn-outline-danger">
                                     <i class="fa-solid fa-times"></i>
                                 </button>
