@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Separate empty state into component.
+
 ## [0.1.1] - 2025-06-16
 
 ### Fixed
